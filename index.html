@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sri Sri Maa Durga Puja Committee | Jugsalai Fatak, Jamshedpur</title>
+    <!-- Google Fonts for Royal & Traditional Look -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --bg-maroon: #4a0d12;
+            --bg-red: #7b1113;
+            --accent-gold: #d4af37;
+            --light-gold: #f3e5ab;
+            --dark-gold: #aa820a;
+            --text-light: #fff5e6;
+            --card-bg: rgba(74, 13, 18, 0.85);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, var(--bg-maroon), var(--bg-red));
+            color: var(--text-light);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, .brand-title {
+            font-family: 'Cinzel', serif;
+            color: var(--accent-gold);
+        }
+
+        /* Header & Navigation */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(40, 5, 8, 0.95);
+            border-bottom: 2px solid var(--accent-gold);
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 5%;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-area h1 {
+            font-size: 1.1rem;
+            color: var(--accent-gold);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: var(--accent-gold);
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 1.8rem;
+            color: var(--accent-gold);
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 160px 20px 80px 20px;
+            text-align: center;
+            background: radial-gradient(circle, rgba(123,17,19,0.8) 0%, rgba(74,13,18,1) 100%);
+            border-bottom: 3px solid var(--accent-gold);
+        }
+
+        .hero-img-container {
+            width: 220px;
+            height: 220px;
+            margin: 0 auto 25px auto;
+            border-radius: 50%;
+            border: 4px solid var(--accent-gold);
+            overflow: hidden;
+            box-shadow: 0 0 25px rgba(212, 175, 55, 0.6);
+        }
+
+        .hero-img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero .location {
+            font-size: 1.2rem;
+            color: var(--light-gold);
+            margin-bottom: 15px;
+        }
+
+        .hero .tagline {
+            font-size: 1.1rem;
+            font-style: italic;
+            max-width: 600px;
+            margin: 0 auto 30px auto;
+            color: #ffeaa7;
+        }
+
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .btn {
+            background: linear-gradient(135deg, var(--accent-gold), var(--dark-gold));
+            color: #4a0d12;
+            padding: 12px 25px;
+            border-radius: 30px;
+            font-weight: 600;
+            text-decoration: none;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: 1px solid #fff;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(212, 175, 55, 0.5);
+        }
+
+        /* Section Layout Common Styles */
+        section {
+            padding: 70px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background: var(--accent-gold);
+            margin: 10px auto 0 auto;
+        }
+
+        /* About Section */
+        .about-card {
+            background: rgba(0, 0, 0, 0.3);
+            border: 2px solid var(--accent-gold);
+            border-radius: 15px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+        }
+
+        .about-card p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-light);
+            margin-bottom: 20px;
+        }
+
+        /* Events & Schedule Section */
+        .events-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .event-card {
+            background: rgba(40, 5, 8, 0.9);
+            border: 1px solid var(--accent-gold);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            transition: transform 0.3s;
+        }
+
+        .event-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .event-img {
+            height: 160px;
+            width: 100%;
+            object-fit: cover;
+            border-bottom: 2px solid var(--accent-gold);
+        }
+
+        .event-content {
+            padding: 20px;
+        }
+
+        .event-content h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: var(--light-gold);
+        }
+
+        .event-date {
+            font-size: 0.9rem;
+            color: var(--accent-gold);
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .event-desc {
+            font-size: 0.95rem;
+            color: #ddd;
+        }
+
+        /* Donation Section */
+        .donation-wrapper {
+            background: var(--text-light);
+            color: var(--bg-maroon);
+            border: 4px solid var(--accent-gold);
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .donation-wrapper h3 {
+            color: var(--bg-red);
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        .qr-box {
+            width: 100%;
+            max-width: 320px;
+            margin: 0 auto 20px auto;
+            border: 3px solid var(--accent-gold);
+            border-radius: 12px;
+            overflow: hidden;
+            background: #fff;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .qr-box img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .donation-wrapper p {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .upi-details {
+            background: #f9f2d9;
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px dashed var(--accent-gold);
+            margin-bottom: 20px;
+            font-weight: 600;
+            color: #4a0d12;
+            font-size: 1.1rem;
+        }
+
+        /* Committee Members Section */
+        .committee-grid {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .member-card {
+            background: rgba(40, 5, 8, 0.9);
+            border: 2px solid var(--accent-gold);
+            border-radius: 15px;
+            padding: 30px;
+            width: 300px;
+            text-align: center;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+        }
+
+        .member-avatar {
+            width: 100px;
+            height: 100px;
+            background: var(--accent-gold);
+            border-radius: 50%;
+            margin: 0 auto 20px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            color: var(--bg-maroon);
+            border: 2px solid #fff;
+        }
+
+        .member-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 5px;
+        }
+
+        .member-role {
+            color: var(--light-gold);
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+
+        .call-btn {
+            display: inline-block;
+            background: #27ae60;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 10px;
+            transition: background 0.3s;
+        }
+
+        .call-btn:hover {
+            background: #219653;
+        }
+
+        /* Gallery Section */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-item {
+            position: relative;
+            height: 220px;
+            border: 2px solid var(--accent-gold);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.08);
+        }
+
+        .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0,0,0,0.7);
+            color: var(--accent-gold);
+            text-align: center;
+            padding: 8px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        /* Instagram Section */
+        .instagram-section {
+            text-align: center;
+            background: rgba(0,0,0,0.2);
+            padding: 50px 20px;
+            border-top: 1px solid rgba(212,175,55,0.3);
+            border-bottom: 1px solid rgba(212,175,55,0.3);
+        }
+
+        .insta-btn {
+            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            transition: transform 0.3s;
+        }
+
+        .insta-btn:hover {
+            transform: scale(1.05);
+        }
+
+        /* Location Section */
+        .location-card {
+            background: rgba(40, 5, 8, 0.9);
+            border: 2px solid var(--accent-gold);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+        }
+
+        .location-card p {
+            font-size: 1.1rem;
+            margin-top: 10px;
+            color: var(--light-gold);
+        }
+
+        /* Footer */
+        footer {
+            background: #2a0508;
+            border-top: 2px solid var(--accent-gold);
+            text-align: center;
+            padding: 40px 20px;
+            color: #dcdcdc;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 20px 0;
+            list-style: none;
+        }
+
+        .footer-links a {
+            color: var(--accent-gold);
+            text-decoration: none;
+            font-size: 0.95rem;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-blessing {
+            font-style: italic;
+            color: var(--light-gold);
+            margin-top: 15px;
+            font-size: 1.05rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background: rgba(40, 5, 8, 0.98);
+                padding: 20px 0;
+                text-align: center;
+                border-bottom: 2px solid var(--accent-gold);
+            }
+
+            nav ul.active {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .hero h2 {
+                font-size: 1.8rem;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header>
+        <div class="logo-area">
+            <h1>Sri Sri Maa Durga Puja Committee</h1>
+        </div>
+        <div class="menu-toggle" id="mobile-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+        <nav>
+            <ul id="nav-list">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#schedule">Schedule</a></li>
+                <li><a href="#donation">Donation</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 1. Homepage / Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-img-container">
+            <img src="https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?auto=format&fit=crop&w=600&q=80" alt="Maa Durga Idol">
+        </div>
+        <h2>Sri Sri Maa Durga Puja Committee</h2>
+        <p class="location"><i class="fas fa-map-marker-alt"></i> Jugsalai Fatak, Jamshedpur, Jharkhand</p>
+        <p class="tagline">"Celebrating Faith, Devotion, Unity & Tradition Since 2024"</p>
+        <div class="hero-buttons">
+            <a href="#schedule" class="btn">Explore Puja Events</a>
+            <a href="#schedule" class="btn">Puja Schedule</a>
+            <a href="#donation" class="btn">Donation</a>
+            <a href="#contact" class="btn">Contact Committee</a>
+        </div>
+    </section>
+
+    <!-- 2. About Our Committee -->
+    <section id="about">
+        <h2 class="section-title">About Our Committee</h2>
+        <div class="about-card">
+            <p>Sri Sri Maa Durga Puja Committee celebrates Durga Puja with profound devotion, cultural traditions, community participation, and the divine blessings of Maa Durga.</p>
+            <p>Based in the vibrant heart of <strong>Jugsalai Fatak</strong>, our committee was proudly established in <strong>2024</strong> with the vision of uniting devotees, preserving age-old traditions, and spreading spiritual joy throughout the community.</p>
+        </div>
+    </section>
+
+    <!-- 3. Durga Puja Events and Schedule -->
+    <section id="schedule">
+        <h2 class="section-title">Durga Puja Events & Schedule</h2>
+        <div class="events-grid">
+            
+            <div class="event-card">
+                <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=400&q=80" alt="Mahalaya" class="event-img">
+                <div class="event-content">
+                    <h3>Mahalaya</h3>
+                    <p class="event-date">Date: Schedule to be announced</p>
+                    <p class="event-desc">Invoking the descent of Maa Durga with sacred chants and radio hymns marking the beginning of Devi Paksha.</p>
+                </div>
+            </div>
+
+            <div class="event-card">
+                <img src="https://images.unsplash.com/photo-1567157577867-05ccb1388e66?auto=format&fit=crop&w=400&q=80" alt="Maha Shashthi" class="event-img">
+                <div class="event-content">
+                    <h3>Maha Shashthi</h3>
+                    <p class="event-date">Date: Schedule to be announced</p>
+                    <p class="event-desc">Bodhan, Amantran, and Adhivas, welcoming Goddess Durga into the pandal with festive fervor.</p>
+                </div>
+            </div>
+
+            <div class="event-card">
+                <img src="https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?auto=format&fit=crop&w=400&q=80" alt="Maha Saptami" class="event-img">
+                <div class="event-content">
+                    <h3>Maha Saptami</h3>
+                    <p class="event-date">Date: Schedule to be announced</p>
+                    <p class="event-desc">Pran Pratishtha of the deity, beginning with Nabapatrika Snan (Kola Bou bathing rituals).</p>
+                </div>
+            </div>
+
+            <div class="event-card">
+                <img src="https://images.unsplash.com/photo-1599839575945-a9e5af0b3bc5?auto=format&fit=crop&w=400&q=80" alt="Maha Ashtami" class="event-img">
+                <div class="event-content">
+                    <h3>Maha Ashtami</h3>
+                    <p class="event-date">Date: Schedule to be announced</p>
+                    <p class="event-desc">Pushpanjali, Kumari Puja, and vibrant Dhunuchi Naach during the grand evening Aarti.</p>
+                </div>
+            </div>
+
+            <div class="event-card">
+                <img src="https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?auto=format&fit=crop&w=400&q=80" alt="Sandhi Puja" class="event-img">
+                <div class="event-content">
+                    <h3>Sandhi Puja</h3>
+                    <p class="event-date">Date: Schedule to be announced</p>
+                    <p class="event-desc">The sacred transition moment between Ashtami and Navami marked by 108 earthen lamps and lotus offerings.</p>
+                </div>
+            </div>
+
+            <div class="event-card">
+                <img src="https://images.unsplash.com/photo-1567157577867-05ccb1388e66?auto=format&fit=crop&w=400&q=80" alt="Maha Navami" class="event-img">
+                <div class="event-content">
+                    <h3>Maha Navami</h3>
+                    <p class="event-date">Date: Schedule to be announced</p>
+                    <p class="event-desc">Maha Aarti, Bhog distribution, and special devotional prayers dedicated to Goddess Siddhidatri.</p>
+                </div>
+            </div>
+
+            <div class="event-card">
+                <img src="https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?auto=format&fit=crop&w=400&q=80" alt="Maha Dashami" class="event-img">
+                <div class="event-content">
+                    <h3>Maha Dashami</h3>
+                    <p class="event-date">Date: Schedule to be announced</p>
+                    <p class="event-desc">Dabhyo Pujo, Dashami rituals, and bidding a emotional farewell to the Divine Mother.</p>
+                </div>
+            </div>
+
+            <div class="event-card">
+                <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&
